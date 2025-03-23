@@ -1,0 +1,30 @@
+/* Container principal */
+.home-container {
+    display: flex;
+    height: 100%; /* Ocupa toda a altura da tela */
+    width: 100%; /* Ocupa toda a largura da tela */
+    background-color: #f0f2f5; /* Cor de fundo semelhante ao WhatsApp Web */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    overflow: hidden; /* Remove barras de rolagem do container principal */
+  }
+  
+  
+  /* Barra lateral (contatos) */
+  app-contatos {
+    width: 30%; /* Largura da barra lateral */
+    background-color: #ffffff; /* Fundo branco */
+    border-right: 1px solid #e9edef; /* Borda direita sutil */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Adiciona scroll vertical apenas na barra lateral */
+  }
+  
+  /* Área de conversa */
+  app-conversa {
+    width: 70%; /* Largura da área de conversa */
+    background-color: #ffffff; /* Fundo branco */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Remove barras de rolagem da área de conversa */
+    padding: 10px;
+  }

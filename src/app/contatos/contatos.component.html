@@ -1,0 +1,14 @@
+<div class="contatos-container">
+    <!-- Barra de pesquisa -->
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar ou começar uma nova conversa" />
+    </div>
+  
+    <!-- Lista de contatos -->
+    <div class="contact-list">
+      <div *ngFor="let contato of contatos" class="contact-item">
+        <img src="https://via.placeholder.com/40" alt="Foto do contato" />
+        <div class="contact-name">{{ contato.nome }}</div>
+      </div>
+    </div>
+  </div>
