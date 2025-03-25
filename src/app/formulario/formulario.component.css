@@ -9,14 +9,15 @@
 h1 {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 .titulo-imagem {
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: 70px;
   margin-left: 50px;
 }
 
@@ -48,8 +49,11 @@ input:focus {
 }
 
 button {
-  width: 100%;
+  display: flex;
+  justify-self: right;
+  width: 70px;
   padding: 10px;
+  margin-right: -20px;
   font-size: 1.1em;
   background-color: blue;
   color: rgb(255, 255, 255);
