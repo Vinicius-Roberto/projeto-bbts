@@ -7,6 +7,7 @@
 }
 
 h1 {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +28,7 @@ h1 {
 }
 
 label {
+  color: white;
   display: block;
   font-size: 1.1em;
   font-weight: bold;
@@ -48,19 +50,28 @@ input:focus {
   border-bottom: 2px solid #007bff;
 }
 
+.btn-access {
+  box-shadow: 2px 4px 5px 0px rgba(64,64,64,1);
+  -webkit-box-shadow: 2px 4px 5px 0px rgba(64,64,64,1);
+  -moz-box-shadow: 2px 4px 5px 0px rgba(64,64,64,1);
+}
+
 button {
   display: flex;
   justify-self: right;
-  width: 70px;
   padding: 10px;
   margin-right: -20px;
   font-size: 1.1em;
   background-color: blue;
-  color: rgb(255, 255, 255);
+  color: #465EFF;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+button:enabled {
+  background-color: #ffffff;
 }
 
 button:disabled {
@@ -68,5 +79,10 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background-color: #0056b3;
+  background-color: #b8b8b8;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
