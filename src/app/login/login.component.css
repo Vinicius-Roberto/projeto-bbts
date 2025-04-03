@@ -9,3 +9,23 @@ app-formulario, app-imagem {
   padding: 20px; /* Opcional: para dar um espaço interno aos componentes */
   box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
 }
+
+@media screen and (max-width: 768px) {
+  .cadastro-content {
+    flex-direction: column; /* Muda a direção dos componentes para vertical */
+  }
+
+  app-imagem{
+    display: none;
+  }
+  app-formulario{
+    display: flex;
+    height: auto; /* Remove a altura fixa dos componentes */
+    max-width: 100%; /* Garante que o componente ocupe toda a largura */
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+
