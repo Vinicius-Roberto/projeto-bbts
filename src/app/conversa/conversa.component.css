@@ -1,43 +1,55 @@
 .conversa-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ocupa toda a altura disponível */
-    overflow: hidden; /* Remove barras de rolagem do container */
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupa toda a altura disponível */
+}
+
+.chat-header {
+  padding: 25px 20px;
+  background-color: blue;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #111b21;
+  font-weight: 500;
+}
+
   
-  .message-area {
-    flex: 1; /* Faz a área de mensagens ocupar o espaço restante */
-    padding: 20px;
-    overflow-y: auto; /* Adiciona scroll vertical apenas na área de mensagens */
-    background-color: #e5ddd5; /* Cor de fundo das mensagens */
-  }
+.message-area {
+  flex: 1; /* Faz a área de mensagens ocupar o espaço restante */
+  padding: 20px;
+  overflow-y: auto; /* Adiciona scroll vertical apenas na área de mensagens */
+  background-color: #bebebe; /* Cor de fundo das mensagens */
+}
   
-  .message-input {
-    padding: 10px;
-    background-color: #f0f2f5;
-    border-top: 1px solid #e9edef;
-    display: flex;
-    align-items: center;
-  }
+.message-input {
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-top: 1px solid #e9edef;
+  display: flex;
+  align-items: center;
+}
   
-  .message-input input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-  }
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
   
-  .message-input button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    background-color: #00a884; /* Cor do botão semelhante ao WhatsApp */
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+.message-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: blue; /* Cor do botão semelhante ao WhatsApp */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
   
-  .message-input button:hover {
-    background-color: #008c6d; /* Cor do botão ao passar o mouse */
-  }
+.message-input button:hover {
+  background-color: rgb(0, 0, 143); /* Cor do botão ao passar o mouse */
+}

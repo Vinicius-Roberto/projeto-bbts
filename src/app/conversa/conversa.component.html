@@ -1,7 +1,20 @@
 <div class="conversa-container">
-    <h3>Conversa</h3>
-    <div class="mensagens">
-      <!-- Mensagens serão exibidas aqui -->
+  <div class="chat-header">
+    <h1>{{ contato.nome }}</h1>
+  </div>
+
+  <div class="message-area" #messageArea>
+    <div class="mensagem" *ngFor="let msg of mensagens">
+      {{ msg }}
     </div>
-    <input type="text" placeholder="Digite uma mensagem..." />
+  </div>
+
+  <div class="message-input">
+    <input
+      type="text"
+      placeholder="Digite uma mensagem..."
+      [(ngModel)]="mensagem"
+      (keyup.enter)="enviarMensagem()" />
+    <button (click)="enviarMensagem()">Enviar</button>
+  </div>
 </div>

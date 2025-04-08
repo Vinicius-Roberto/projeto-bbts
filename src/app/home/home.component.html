@@ -1,7 +1,7 @@
 <div class="home-container">
-    <!-- Barra lateral de contatos -->
-    <app-contatos></app-contatos>
-  
-    <!-- Área de conversa -->
-    <app-conversa></app-conversa>
-  </div>
+  <!-- Barra lateral de contatos -->
+  <app-contatos (contatoSelecionado)="aoSelecionarContato($event)"></app-contatos>
+
+  <!-- Área de conversa -->
+  <app-conversa [contato]="contatoAtual"></app-conversa>
+</div>

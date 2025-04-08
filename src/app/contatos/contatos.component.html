@@ -1,14 +1,18 @@
 <div class="contatos-container">
-    <!-- Barra de pesquisa -->
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar ou começar uma nova conversa" />
-    </div>
-  
-    <!-- Lista de contatos -->
-    <div class="contact-list">
-      <div *ngFor="let contato of contatos" class="contact-item">
-        <img src="https://via.placeholder.com/40" alt="Foto do contato" />
-        <div class="contact-name">{{ contato.nome }}</div>
-      </div>
+  <!-- Barra de pesquisa -->
+  <div class="title-bar">
+    <h3><img src="assets/image.png" alt="">ChatBBTS</h3>
+  </div>
+
+  <!-- Lista de contatos -->
+  <div class="contact-list">
+    <div 
+      *ngFor="let contato of contatos" 
+      class="contact-item"
+      (click)="selecionarContato(contato)">
+      
+      <img src="https://via.placeholder.com/40" alt="Foto do contato" />
+      <div class="contact-name">{{ contato.nome }}</div>
     </div>
   </div>
+</div>

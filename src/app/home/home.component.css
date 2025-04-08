@@ -5,7 +5,8 @@
     width: 100%; /* Ocupa toda a largura da tela */
     background-color: #f0f2f5; /* Cor de fundo semelhante ao WhatsApp Web */
     font-family: Arial, sans-serif; /* Fonte padrão */
-    overflow: hidden; /* Remove barras de rolagem do container principal */
+    overflow: hidden; /*Remove barras de rolagem do container*/
+    border-radius: 16px;
   }
   
   
@@ -26,5 +27,4 @@
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Remove barras de rolagem da área de conversa */
-    padding: 10px;
   }

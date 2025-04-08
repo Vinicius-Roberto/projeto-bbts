@@ -3,25 +3,33 @@
     flex-direction: column;
     height: 100%; /* Ocupa toda a altura disponível */
     overflow: hidden; /* Remove barras de rolagem do container */
+    height: 100vh;
   }
   
-  .search-bar {
-    padding: 10px;
-    background-color: #f0f2f5;
-    border-bottom: 1px solid #e9edef;
+  .title-bar {
+    display: flex;
+    align-items: center;        /* Centraliza verticalmente */
+    background-color: blue;
+    padding: 15px;
   }
   
-  .search-bar input {
-    width: calc(100% - 20px); /* Ajusta a largura do input */
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ffffff;
-    font-size: 14px;
+  .title-bar h3 {
+    display: flex;              /* Permite alinhar img + texto */
+    align-items: center;        /* Centraliza verticalmente dentro do h3 */
+    font-size: 24px;
+    color: #fff;                /* Muda pra branco se fundo for azul */
+    margin: 0;
+  }
+  
+  .title-bar h3 img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
   }
   
   .contact-list {
     flex: 1; /* Faz a lista ocupar o espaço restante */
+    max-height: 100%;
     overflow-y: auto; /* Adiciona scroll vertical apenas na lista */
   }
   
