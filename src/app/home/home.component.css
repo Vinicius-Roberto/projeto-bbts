@@ -1,11 +1,10 @@
 
 .home-container {
     display: flex;
-    height: 100%; /* Ocupa toda a altura da tela */
-    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw; /* Ocupa toda a largura da tela */
     background-color: #f0f2f5; /* Cor de fundo semelhante ao WhatsApp Web */
     overflow: hidden; /*Remove barras de rolagem do container*/
-    border-radius: 16px;
   }
   
   

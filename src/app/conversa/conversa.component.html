@@ -5,8 +5,11 @@
   </div>
 
   <div class="message-area" #messageArea>
-    <div class="mensagem" *ngFor="let msg of mensagens">
-      {{ msg }}
+    <div
+      class="mensagem"
+      *ngFor="let msg of mensagens"
+      [ngClass]="{ 'enviada': msg.tipo === 'enviada', 'recebida': msg.tipo === 'recebida' }">
+      {{ msg.texto }}
     </div>
   </div>
 

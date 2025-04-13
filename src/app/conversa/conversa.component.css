@@ -25,12 +25,35 @@
   border-radius: 50%;
 }
 
+.mensagem {
+  display: block;
+  padding: 10px;
+  background-color: aqua;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 70%; /* Garante que o balão não ocupe toda a largura */
+  word-wrap: break-word; /* Quebra palavras longas */
+  white-space: normal; /* Permite quebra de linha no texto */
+}
+
+.enviada {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.recebida {
+  background-color: #fff;
+  align-self: flex-start;
+}
+
   
 .message-area {
-  flex: 1; /* Faz a área de mensagens ocupar o espaço restante */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  overflow-y: auto; /* Adiciona scroll vertical apenas na área de mensagens */
-  background-color: #bebebe; /* Cor de fundo das mensagens */
+  overflow-y: auto;
+  background-color: #bebebe;
 }
   
 .message-input {

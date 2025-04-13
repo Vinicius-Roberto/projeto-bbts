@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./conversa.component.css']
 })
 export class ConversaComponent implements AfterViewChecked {
-  @Input() contato: any; // <- Isso resolve o erro
+  @Input() contato: any;
 
-  mensagens: string[] = [];
+  mensagens: { texto: string, tipo: 'enviada' | 'recebida' }[] = [];
   mensagem: string = '';
 
   @ViewChild('messageArea') private messageArea!: ElementRef;
@@ -23,10 +23,22 @@ export class ConversaComponent implements AfterViewChecked {
 
   enviarMensagem(): void {
     if (this.mensagem.trim()) {
-      this.mensagens.push(this.mensagem);
+      // Envia a mensagem do usuário
+      this.mensagens.push({ texto: this.mensagem, tipo: 'enviada' });
+      
+      const mensagemEnviada = this.mensagem; // Salva se quiser usar na resposta
       this.mensagem = '';
+  
+      // Simula uma resposta do contato com delay
+      setTimeout(() => {
+        this.mensagens.push({
+          texto: `Recebi: "${mensagemEnviada}"`, // ou qualquer outro texto
+          tipo: 'recebida'
+        });
+      }, 1000); // 1 segundo de delay
     }
   }
+  
 
   scrollToBottom(): void {
     try {
