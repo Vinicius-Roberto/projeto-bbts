@@ -11,8 +11,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class ConversaComponent implements AfterViewChecked {
   @Input() contato: any;
-
-  mensagens: { texto: string, tipo: 'enviada' | 'recebida' }[] = [];
   mensagem: string = '';
 
   @ViewChild('messageArea') private messageArea!: ElementRef;
@@ -21,24 +19,25 @@ export class ConversaComponent implements AfterViewChecked {
     this.scrollToBottom();
   }
 
+  get mensagens() {
+    return this.contato?.mensagens || [];
+  }
+
   enviarMensagem(): void {
-    if (this.mensagem.trim()) {
-      // Envia a mensagem do usuário
-      this.mensagens.push({ texto: this.mensagem, tipo: 'enviada' });
-      
-      const mensagemEnviada = this.mensagem; // Salva se quiser usar na resposta
+    if (this.mensagem.trim() && this.contato) {
+      this.contato.mensagens.push({ texto: this.mensagem, tipo: 'enviada' });
+
+      const mensagemEnviada = this.mensagem;
       this.mensagem = '';
-  
-      // Simula uma resposta do contato com delay
+
       setTimeout(() => {
-        this.mensagens.push({
-          texto: `Recebi: "${mensagemEnviada}"`, // ou qualquer outro texto
+        this.contato.mensagens.push({
+          texto: `Recebi: "${mensagemEnviada}"`,
           tipo: 'recebida'
         });
-      }, 1000); // 1 segundo de delay
+      }, 1000);
     }
   }
-  
 
   scrollToBottom(): void {
     try {
