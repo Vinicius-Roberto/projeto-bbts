@@ -5,15 +5,24 @@
 }
 
 .chat-header {
-  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 20px;
   background-color: blue;
 }
 
 .chat-header h1 {
-  margin: 0;
+  margin: 0 0 0 20px;
   font-size: 18px;
-  color: #111b21;
-  font-weight: 500;
+  color: white;
+  font-weight: 800;
+}
+
+.chat-header img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
   
