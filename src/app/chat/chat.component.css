@@ -1,0 +1,42 @@
+app-conversa ::ng-deep .chat-header img {
+  display: none;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+
+.side-bar-menu {
+  width: 70px;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.side-bar-menu i {
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+.side-bar-menu #perfil img, .contact-list img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.side-bar-menu .logo {
+  width: 30px;
+}
+
+.side-bar-menu #perfil, .side-bar-menu #tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
