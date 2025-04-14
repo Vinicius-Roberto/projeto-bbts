@@ -1,14 +1,35 @@
-<div class="contatos-container">
-    <!-- Barra de pesquisa -->
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar ou começar uma nova conversa" />
+<section class="contato-content">
+  <div class="side-bar-menu">
+    <div id="perfil">
+      <img src="assets/Sem título.jpeg" alt="" id="user-perfil">
+      <i class="fa-solid fa-gear" ></i>
     </div>
-  
-    <!-- Lista de contatos -->
-    <div class="contact-list">
-      <div *ngFor="let contato of contatos" class="contact-item">
-        <img src="https://via.placeholder.com/40" alt="Foto do contato" />
-        <div class="contact-name">{{ contato.nome }}</div>
-      </div>
+
+    <img src="assets/image.png" alt="" class="logo">
+
+    <div id="tools">
+      <i class="fa-regular fa-moon" ></i>
+      <i class="fa-solid fa-globe" ></i>    </div>
+  </div>
+
+  <section id="contato-content">
+  <div class="contact-search">
+    <input
+      type="text"
+      placeholder="Pesquisar contato..."
+      [(ngModel)]="filtro" />
+  </div>
+
+  <div class="contact-list">
+    <div 
+      *ngFor="let contato of contatosFiltrados" 
+      class="contact-item"
+      (click)="selecionarContato(contato)">
+      
+      <img [src]="contato.imagem" alt="Foto do {{ contato.nome }}" />
+      <div class="contact-name">{{ contato.nome }}</div>
     </div>
   </div>
+</section>
+
+</section>
