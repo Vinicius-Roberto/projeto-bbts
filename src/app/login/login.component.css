@@ -8,6 +8,9 @@ app-formulario, app-imagem {
   height: 100%; /* Garante que ambos os componentes ocupem toda a altura da tela */
   padding: 20px; /* Opcional: para dar um espaço interno aos componentes */
   box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
