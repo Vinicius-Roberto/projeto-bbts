@@ -45,6 +45,6 @@ export class ContatosComponent {
   }
 
   selecionarContato(contato: any) {
-    this.contatoSelecionado.emit(contato);
+    this.contatoSelecionado.emit(contato);  
   }
 }

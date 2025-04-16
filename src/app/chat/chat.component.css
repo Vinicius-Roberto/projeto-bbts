@@ -2,6 +2,10 @@ app-conversa ::ng-deep .chat-header img {
   display: none;
 }
 
+i {
+  color: white;
+}
+
 .chat {
   display: grid;
   grid-template-columns: 70px 1fr;
@@ -10,7 +14,7 @@ app-conversa ::ng-deep .chat-header img {
 .side-bar-menu {
   width: 70px;
   height: 100vh;
-  background-color: blue;
+  background-color: #465EFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
