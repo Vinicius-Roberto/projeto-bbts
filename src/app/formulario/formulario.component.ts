@@ -22,7 +22,7 @@ export class FormularioComponent {
 
   onSubmit() {
     // Simulação de login
-    const cliente = { nome: 'João', cpf: '12345678900' };
+    const cliente = { nome: 'Leo', cpf: '12345678900' };
     const funcionario = { nome: 'Maria', cpf: '98765432100' };
 
     if (this.formData.nome === cliente.nome && this.formData.cpf === cliente.cpf) {
