@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Import necessário para ngModel
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router'; // Import para redirecionamento
 
 @Component({
   selector: 'app-contatos',
@@ -37,6 +38,8 @@ export class ContatosComponent {
     { nome: 'Aline', id: 20, imagem: 'assets/Sem título.jpeg', mensagens: [] }
   ];
 
+  constructor(private router: Router) {}
+
   get contatosFiltrados() {
     const termo = this.filtro.toLowerCase();
     return this.contatos.filter(contato =>
@@ -45,6 +48,12 @@ export class ContatosComponent {
   }
 
   selecionarContato(contato: any) {
-    this.contatoSelecionado.emit(contato);  
+    this.contatoSelecionado.emit(contato);
+  }
+
+  logout() {
+    // Se estiver usando localStorage ou algo similar para login
+    localStorage.clear(); // Limpa dados de login
+    this.router.navigate(['/']); // Redireciona para a tela de login
   }
 }

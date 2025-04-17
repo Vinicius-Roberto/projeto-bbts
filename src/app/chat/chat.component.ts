@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router"; // <- Importa o router
 import { ConversaComponent } from "../conversa/conversa.component";
 
 @Component({
@@ -11,10 +12,16 @@ import { ConversaComponent } from "../conversa/conversa.component";
 export class ChatComponent {
   contatoPersonalizado = {
     nome: "ChatBBTS",
-    foto: null, // Remove a foto
+    foto: null,
     mensagens: [
       { texto: "Olá! Como posso ajudar?", tipo: "recebida" }
     ]
   };
-}
 
+  constructor(private router: Router) {}
+
+  logout() {
+    localStorage.clear(); // Limpa sessão ou token, se estiver usando
+    this.router.navigate(['/']); // Redireciona para tela de login
+  }
+}
