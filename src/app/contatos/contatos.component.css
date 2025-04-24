@@ -8,7 +8,7 @@ html, body {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #BDB6FF; /* só como exemplo */
+    background-color: #988dfa; /* só como exemplo */
     color: white;
     overflow: hidden;
 }
@@ -58,7 +58,7 @@ html, body {
 .contact-search {
     width: 100%;
     padding: 12px 16px;
-    background-color: #BDB6FF;
+    background-color: #988dfa;
     box-sizing: border-box;
 }
 
@@ -123,3 +123,4 @@ html, body {
     background-color: #465EFF;
     border-radius: 4px;
 }
+
